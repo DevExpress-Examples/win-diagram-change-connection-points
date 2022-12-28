@@ -23,4 +23,5 @@ shape.ConnectionPoints = new DevExpress.Diagram.Core.DiagramPointCollection(poin
 ## More Examples
 
 [How to: Create Custom Shapes with Connection Points](https://docs.devexpress.com/WindowsForms/118080/controls-and-libraries/diagrams/examples/how-to-create-custom-shapes-with-connection-points)
+
 [How to: Create Custom Shapes with Connection Points Using XAML](https://docs.devexpress.com/WindowsForms/118076/controls-and-libraries/diagrams/examples/how-to-create-custom-shapes-with-connection-points-using-xaml)
