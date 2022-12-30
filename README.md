@@ -3,11 +3,15 @@
 [![](https://img.shields.io/badge/Open_in_DevExpress_Support_Center-FF7200?style=flat-square&logo=DevExpress&logoColor=white)](https://supportcenter.devexpress.com/ticket/details/T1136806)
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
-# DiagramControl for WinForms - How to change a shape's connection points at runtime
 
-This example shows how to use the [ConnectionPoints](https://docs.devexpress.com/WindowsForms/DevExpress.XtraDiagram.DiagramItem.ConnectionPoints) property to change the number of a shape's connection points at runtime.
+# DiagramControl for WinForms - Change a Shape's Connection Points at Runtime
 
-The `ConnectionPoints` collection does not have public members that allow adding or removing items from it. You need to re-initialize it instead:
+This example modifies a shape's [ConnectionPoints](https://docs.devexpress.com/WindowsForms/DevExpress.XtraDiagram.DiagramItem.ConnectionPoints) collection at runtime. To illustrate this behavior, we added a trackbar that changes the number and position of connection points.
+
+![image](https://user-images.githubusercontent.com/65009440/210053843-0fd57843-b601-4bd5-b7af-e9938c66a2f0.png)
+
+The `ConnectionPoints` collection does not have public members that allow you to add or remove items. To accomplish this task, create a new point collection and assign it to the [ConnectionPoints](https://docs.devexpress.com/WindowsForms/DevExpress.XtraDiagram.DiagramItem.ConnectionPoints) property:
+
 ```cs
 PointFloat[] points = new PointFloat[...];
 shape.ConnectionPoints = new DevExpress.Diagram.Core.DiagramPointCollection(points);
@@ -19,10 +23,10 @@ shape.ConnectionPoints = new DevExpress.Diagram.Core.DiagramPointCollection(poin
 
 ## Documentation
 
-[Connectors](https://docs.devexpress.com/WindowsForms/116884/controls-and-libraries/diagrams/diagram-items/connectors)
+- [Connectors](https://docs.devexpress.com/WindowsForms/116884/controls-and-libraries/diagrams/diagram-items/connectors)
+- [DiagramItem.ConnectionPoints](https://docs.devexpress.com/WindowsForms/DevExpress.XtraDiagram.DiagramItem.ConnectionPoints)
 
 ## More Examples
 
-[How to: Create Custom Shapes with Connection Points](https://docs.devexpress.com/WindowsForms/118080/controls-and-libraries/diagrams/examples/how-to-create-custom-shapes-with-connection-points)
-
-[How to: Create Custom Shapes with Connection Points Using XAML](https://docs.devexpress.com/WindowsForms/118076/controls-and-libraries/diagrams/examples/how-to-create-custom-shapes-with-connection-points-using-xaml)
+- [Diagram Control for WinForms - Create Custom Shapes with Connection Points](https://github.com/DevExpress-Examples/winforms-diagram-create-custom-shapes-with-connection-points)
+- [Diagram Control for WinForms - Create Custom Shapes with Connection Points in XAML](https://github.com/DevExpress-Examples/diagramcontrol-how-to-create-custom-shapes-with-connection-points-using-xaml-markup-t381372)
